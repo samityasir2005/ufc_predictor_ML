@@ -1,6 +1,6 @@
 # UFC Fight Predictor - PyTorch
 
-Simple neural network for predicting UFC fight outcomes using PyTorch.
+Simple Machine learning model for predicting UFC fight outcomes using PyTorch.
 
 ## Quick Start
 
@@ -29,43 +29,15 @@ The model analyzes 19 fighter statistics to predict who will win:
 - **Record**: Wins, losses, win rates
 - **Momentum**: Win/loss streaks
 - **Fighting Stats**: Striking, takedowns, submissions
-- **Finish Rates**: KO and submission percentages
-- **Experience**: Total fights and rounds
+
 
 ## Model Details
 
 - **Architecture**: 4-layer neural network (64→32→16→1)
-- **Accuracy**: ~62-65%
+- **Accuracy**: ~60%
 - **Training**: 50 epochs, ~30 seconds on GPU
 - **Features**: 19 key statistics
-- **Data**: ~10,000 UFC fights with position bias removal
-
-## Example Prediction
-
-```
-============================================================
-FIGHT PREDICTION
-============================================================
-
-Fighter 1: Islam Makhachev (25-1)
-  Win Probability: 68.5%
-
-Fighter 2: Charles Oliveira (34-9)
-  Win Probability: 31.5%
-
-------------------------------------------------------------
-PREDICTED WINNER: Islam Makhachev
-Confidence: 68.5%
-Assessment: High confidence
-============================================================
-```
-
-To predict different fighters, edit these lines in the last cell:
-
-```python
-fighter1_name = "Your Fighter"
-fighter2_name = "Their Fighter"
-```
+- **Data**: ~7,000 UFC fights with position bias removal
 
 
 ## Requirements
@@ -87,8 +59,6 @@ Uses the [Ultimate UFC Dataset](https://www.kaggle.com/datasets/mdabbert/ultimat
 
 - Best run on Google Colab with GPU for faster training
 - Betting odds and outcome columns are removed to prevent data leakage
-- Data augmentation removes position bias (Red vs Blue corner)
-- Model saves automatically after training
 
 ## Disclaimer
 
